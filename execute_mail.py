@@ -32,10 +32,8 @@ class E_Mail:
         msg["From"] = self._from
         msg["Subject"] = self._subject
         msg["Date"] = formatdate(localtime=1)
-        for _to in self._tos:
-            msg["To"] = _to
-            msg["Message-ID"] = make_msgid()
-            self.smtp.sendmail(msg['From'], msg['To'], msg.as_string())
+        msg["Message-ID"] = make_msgid()
+        self.smtp.sendmail(msg['From'], self._tos, msg.as_string())
     def sendmail(self):
         self.__login_server()
         self.__send_mail()
