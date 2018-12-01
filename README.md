@@ -2,7 +2,7 @@
 This Project uses python to build small and useful tools.
 
 #### devops
-This directory builds modules to manage FTP、SSH
+This directory builds modules to manage FTP、SSH、IMAP
 
 #### email
 This directory builds modules to send mail
