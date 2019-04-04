@@ -6,6 +6,17 @@
 # @Version : $Id$
 
 import shodan
+import fire
+from mataclass import SpiderMetaClass
+
+class oshadon(object, metaclass=SpiderMetaClass):
+  def __init__(self, api_key):
+  	self.API_KEY=api_key
+  	self.results={}
+
+  def __getitem__(self, key):
+  	return self.results[key]
+
 
 API_KEY=""
 
@@ -25,8 +36,7 @@ def get(keyword):
   return ans
 
 if __name__=="__main__":
-  for result in search("vsftpd 2.3.4"):
-    parse(result)
+  fire.Fire()
 
 
 
