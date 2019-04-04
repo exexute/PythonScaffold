@@ -7,7 +7,7 @@
 
 import shodan
 import fire
-from mataclass import SpiderMetaClass
+from MetaClass import SpiderMetaClass
 
 class oshadon(object, metaclass=SpiderMetaClass):
   def __init__(self, api_key):
